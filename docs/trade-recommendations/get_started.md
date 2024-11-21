@@ -26,6 +26,6 @@ Not sure which kind of payment account to set up? There's a full list of [paymen
 
 Making an offer will usually get you a better price and more control (e.g.: setting payment method and deposit percentage), but taking an offer can be more convenient.
 To see both sides of a Haveno-reto trade at the same time, side-by-side: be sure to check out our:
-- [trading recommendations](README.md)
+- [trading recommendations](trading-recommendations.md)
 - [Get started (trading) documentation](../trade-recommendations/haveno-reto_get_started.md)
 - [linked tutorials made by the community](https://haveno-reto.com/#posts).
