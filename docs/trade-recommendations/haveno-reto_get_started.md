@@ -25,6 +25,7 @@ Trading needs an account for the payment method and currency used to take and pu
 ![Image](../resources/img/haveno-ui/create_trading_account.png)
 
 ### 3. Trading
+In this tutorial we simply explain how to trade on Haveno, for technical documentation of the trading protocol, see the [linked page](../the-project/trade-protocol.md)
 
 ### 3.1 Create, fund and publish your offer (maker)
 
