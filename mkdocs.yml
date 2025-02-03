@@ -133,7 +133,7 @@ nav:
   - Bounties: 'development/bounties.md'
   - Import Development Environment: 'development/importing.md'
   - Contributor Guidelines: 'development/contributor-guidelines.md'
-- Haveno UI:
+- Haveno user-guide:
   - Quick Start Guide: 'haveno-ui/quick_start.md'
   - Getting Started: 'haveno-ui/get_started.md'
   - UX tips: 'haveno-ui/UX_tips.md'
