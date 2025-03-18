@@ -33,7 +33,6 @@ torControlUseSafeCookieAuth 1
 useTorForXmr=ON
 torControlCookieFile={haveno-reto-path}/xmr_mainnet/tor/.tor/control_auth_cookie
 torControlPort=9051
-socks5ProxyXmrAddress=127.0.0.1:9050
 ```
 
 Now you can start Tor in first and then RetoSwap, the client will securely control Tor for all it's needs.
@@ -92,6 +91,34 @@ HiddenServicePoWQueueBurst 10
 HiddenServiceMaxStreams 1000
 HiddenServiceMaxStreamsCloseCircuit 1
 ```
+
+!!! tip
+    It is recommended to separate different services.
+    RPC, in particular, can allow unwanted access to 127.0.0.1
+    ```
+    HiddenServiceDir {/path/to/hidden-service}
+    HiddenServicePort 18081 127.0.0.1:18081
+    HiddenServiceEnableIntroDoSDefense 1
+    HiddenServiceEnableIntroDoSRatePerSec 10	# (Default: 25)
+    HiddenServiceEnableIntroDoSBurstPerSec 20	# (Default: 200)
+    HiddenServicePoWDefensesEnabled 1
+    HiddenServicePoWQueueRate 5		# (Default: 250)
+    HiddenServicePoWQueueBurst 10	# (Default: 2500)
+    HiddenServiceMaxStreams 1000
+    HiddenServiceMaxStreamsCloseCircuit 1
+    
+    HiddenServiceDir {/path/to/other-hidden-service}
+    HiddenServicePort 18083 127.0.0.1:18083
+    HiddenServiceEnableIntroDoSDefense 1
+    HiddenServiceEnableIntroDoSRatePerSec 10	# (Default: 25)
+    HiddenServiceEnableIntroDoSBurstPerSec 20	# (Default: 200)
+    HiddenServicePoWDefensesEnabled 1
+    HiddenServicePoWQueueRate 5		# (Default: 250)
+    HiddenServicePoWQueueBurst 10	# (Default: 2500)
+    HiddenServiceMaxStreams 1000
+    HiddenServiceMaxStreamsCloseCircuit 1
+```
+
 Start and stop Tor, now your hidden-service will be available at /path/to/hidden-service/hostname (it's a text-file)
 
 ##### Monero node config
