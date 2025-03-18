@@ -95,7 +95,8 @@ HiddenServiceMaxStreamsCloseCircuit 1
 ??? tip
     It is recommended to separate different services.
     RPC, in particular, can allow unwanted access to 127.0.0.1<br>
-    ```<br>
+    
+    ```
     HiddenServiceDir {/path/to/hidden-service}<br>
     HiddenServicePort 18081 127.0.0.1:18081<br>
     HiddenServiceEnableIntroDoSDefense 1<br>
