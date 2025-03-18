@@ -95,7 +95,7 @@ HiddenServiceMaxStreamsCloseCircuit 1
 ??? tip
     It is recommended to separate different services.
     RPC, in particular, can allow unwanted access to 127.0.0.1<br>
-    ```
+    ```<br>
     HiddenServiceDir {/path/to/hidden-service}<br>
     HiddenServicePort 18081 127.0.0.1:18081<br>
     HiddenServiceEnableIntroDoSDefense 1<br>
@@ -117,7 +117,7 @@ HiddenServiceMaxStreamsCloseCircuit 1
     HiddenServicePoWQueueBurst 10	# (Default: 2500)<br>
     HiddenServiceMaxStreams 1000<br>
     HiddenServiceMaxStreamsCloseCircuit 1<br>
-```
+    ```
 
 Start and stop Tor, now your hidden-service will be available at /path/to/hidden-service/hostname (it's a text-file)
 
