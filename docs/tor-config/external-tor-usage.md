@@ -513,10 +513,11 @@ One or more comma separated.
 
 ### ExternalTor - Dynamic Onion Assignment via `--torControlPort`
 
-```shell
-  
-$ /opt/haveno/bin/Haveno --torControlPort=9051 --torControlCookieFile=/var/run/tor/control.authcookie --torControlUseSafeCookieAuth \
-[ --useTorForXmr=on ]
+```shell 
+TORHOME="$HOME/.local/share/Haveno-reto/xmr_mainnet/tor"
+tor -f $TORHOME/torrc --ControlPortWriteToFile $TORHOME/.tor/control.port --DisableNetwork 0
+/opt/haveno/bin/Haveno --torControlUseSafeCookieAuth --torControlCookieFile=$TORHOME/.tor/control_auth_cookie --torControlPort=$(cat $TORHOME/.tor/control.port | sed 's/.*:\([0-9]\+\)/\1/')
+kill $(cat $TORHOME/pid)
 ```
 
 ### [DirectBindTor](DirectBindTor.md) - Static Onion Assignment via `--hiddenServiceAddress`
